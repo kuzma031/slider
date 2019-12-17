@@ -29,26 +29,16 @@ class Slider {
     calcSize(container,height) {
         // Width
         let totalWidth = 0;
-        // check if container has border
-        // const border = window.getComputedStyle(this.container).borderWidth;
-        // let borderWidth = border.match(/\d+/)[0];
-        // borderWidth = parseInt(borderWidth);
-        // this.currentPosition = borderWidth;
-        // first add width to children
         [...container.children].forEach(item => {
             item.style.width = `${this.sliderWidth}px`;
             totalWidth += this.sliderWidth;
         });
-        // then add border width to slide width
-        // this.sliderList.style.left = `-${borderWidth}px`;
         this.sliderList.style.left = `0px`;
 
         container.style.width = `${totalWidth}px`;
     }
 
     responsive() {
-        // on start wrong ?
-
         window.onresize = () => {
             // get container width
             const width = this.container.offsetWidth;
@@ -56,13 +46,6 @@ class Slider {
             this.sliderWidth = width;
             const container = document.querySelector('.slider-list');
             this.calcSize(container);
-            
-            // const children = [...document.querySelectorAll('.slider-item')];
-            // children.forEach(child => {
-            //     child.style.width = `${width}px`;
-            // });
-            // console.log(this.sliderWidth);
-            // update current position
         };
     }
 
