@@ -10,7 +10,7 @@ Please send me message if you find any bugs,
 Happy hacking!
 
 
-####Add to your code:
+#### Add to your code:
 
     <script src="slider.js"></script>
 	const slider = new Slider({
@@ -20,7 +20,7 @@ Happy hacking!
     
 
 
-####Available options　
+#### Available options　
 
 ```javascript
     container: document.querySelector('.slider') //required - container of slider,
